@@ -2,8 +2,8 @@ import { v4 as uuidv4 } from "uuid";
 
 let initialState = {
   users: [
-    { name: "Terry", email: "terry@gmail.com", gen: 22, id: uuidv4() },
-    { name: "Ash", email: "ash@gmail.com", gen: 25, id: uuidv4() },
+    { name: "rick", email: "rick@gmail.com", gen: 22, id: uuidv4() },
+    { name: "danny", email: "danny@gmail.com", gen: 25, id: uuidv4() },
   ],
 };
 

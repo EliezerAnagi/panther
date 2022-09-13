@@ -4,12 +4,7 @@ import AddUserForm from "./components/AddUserForm";
 import AllUsers from "./components/AllUsers";
 
 function App() {
-  const [users, setUsers] =
-    useState();
-    //   [
-    //   { name: 'Terry', email: 'terry@gmail.com', gen: 22, id: '1659431731207' },
-    //   { name: 'Ash', email: 'ash@gmail.com', gen: 25, id: '1659431734534' },
-    // ]
+  const [users, setUsers] = useState();
 
   const handleSubmit = (user) => {
     setUsers([
