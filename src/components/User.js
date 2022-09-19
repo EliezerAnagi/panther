@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import EditUserForm from "./EditUserForm";
+import { DeleteUser } from "../actions/userActions";
+import { useDispatch } from "react-redux";
 
 function User({ userData, deleteUser, handleEdit }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const dispatchFunc = useDispatch();
+
   const handleDelete = () => {
-    deleteUser(userData.id);
+    dispatchFunc(DeleteUser(userData.id));
   };
+
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -23,7 +29,7 @@ function User({ userData, deleteUser, handleEdit }) {
           />
         </Modal.Body>
       </Modal>
-      <div className="card m-2" style={{ width: "18rem" }}>
+      <div className="card m-2" style={{ width: "14rem" }}>
         <div className="card-body">
           <h5 className="card-title">Name: {userData.name}</h5>
           <h6 className="card-subtitle mb-2 text-muted">
@@ -32,7 +38,8 @@ function User({ userData, deleteUser, handleEdit }) {
           <p className="card-text">Gen: {userData.gen}</p>
           <a
             className="btn btn-primary mr-3"
-            href="#"
+            style={{ marginRight: "10px" }}
+            href="#k"
             onClick={handleShow}
             role="button"
           >
@@ -40,7 +47,7 @@ function User({ userData, deleteUser, handleEdit }) {
           </a>
           <a
             className="btn btn-danger"
-            href="#"
+            href="#k"
             onClick={handleDelete}
             role="button"
           >

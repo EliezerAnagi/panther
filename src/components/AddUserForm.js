@@ -18,7 +18,7 @@ function AddUserForm({ AddNewUser }) {
   };
 
   return (
-    <Form>
+    <Form style={{ position: "fixed", width: "40%" }}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Name</Form.Label>
         <Form.Control

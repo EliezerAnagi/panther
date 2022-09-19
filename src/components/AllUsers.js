@@ -6,7 +6,13 @@ function AllUsers({ deleteUser, handleEdit }) {
   return (
     <>
       <div className="container">
-        <div className="row">
+        <div
+          className="row"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+          }}
+        >
           {users.map((item, index) => {
             return (
               <User

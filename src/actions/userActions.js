@@ -4,3 +4,17 @@ export const AddNewUser = (newUser) => {
     payload: newUser,
   };
 };
+
+export const DeleteUser = (id) => {
+  return {
+    type: "DELETE_USER",
+    payload: id,
+  };
+};
+
+export const EditUser = (info) => {
+  return {
+    type: "EDIT_USER",
+    payload: info,
+  };
+};
